@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region = us-east-1
 }
 
 resource "aws_vpc" "liempart3" {
   cidr_block           = "10.0.0.0/16"
-  tags                 = merge(var.project_tags)
+  tags                 = "Terraform VPC for Part3"
 }
